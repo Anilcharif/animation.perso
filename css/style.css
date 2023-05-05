@@ -1,0 +1,73 @@
+:root {
+    --cl: #6eccee;
+    --c2: #ffdc99;
+    --c3: #e3a4de;
+    --cA: #d455FF;
+    --animation-duration: 0.8s;
+    --border-width: 0.6vmin;
+    --glow: drop-shadow(0 0 6vmin rgba(255, 255, 29%, 0.9));
+    --hole-pos-y: 20%;
+    --hole-radius: 22vmin;
+    --offset-per-surface: calc(360deg / 24);
+  }
+  
+  .wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .container {
+    display: flex;
+    perspective: 800px;
+  }
+  
+  .wall {
+    position: relative;
+    transform-style: preserve-3d;
+    transform: translateZ(-25vmin);
+  }
+  
+  .surface {
+    position: absolute;
+    width: 50vmin;
+    height: 50vmin;
+    border: var(--border-width) solid var(--c2);
+    border-radius: 10%;
+    background-color: var(--cl);
+    animation: rotate-surface var(--animation-duration) linear infinite;
+    animation-delay: calc(var(--offset-per-surface) * (var(--surface-index) - 1));
+  }
+  
+  .surface:nth-child(1) {
+    transform: rotateY(0deg) translateZ(var(--hole-radius));
+  }
+  
+  .surface:nth-child(2) {
+    transform: rotateY(var(--offset-per-surface)) translateZ(var(--hole-radius));
+  }
+  
+  .surface:nth-child(3) {
+    transform: rotateY(calc(var(--offset-per-surface) * 2)) translateZ(var(--hole-radius));
+  }
+  
+  .surface:nth-child(4) {
+    transform: rotateY(calc(var(--offset-per-surface) * 3)) translateZ(var(--hole-radius));
+  }
+  
+  .surface:nth-child(5) {
+    transform: rotateY(calc(var(--offset-per-surface) * 4)) translateZ(var(--hole-radius));
+  }
+  
+  .surface:nth-child(6) {
+    transform: rotateY(calc(var(--offset-per-surface) * 5)) translateZ(var(--hole-radius));
+  }
+  
+  .surface:nth-child(7) {
+    transform: rotateY(calc(var(--offset-per-surface) * 6)) translateZ(var(--hole-radius));
+  }
+  
+  .surface:nth-child(8) {
+    transform: rotateY(calc(var(--offset-per-surface) * 7)) translateZ(var(--hole-radius));
+  }
