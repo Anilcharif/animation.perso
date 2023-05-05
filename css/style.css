@@ -1,6 +1,14 @@
+html{
+  background: #fff url(../asset/wal.jpg) no-repeat fixed center center / cover ;
+  
+  
+}
+
 body {
-  background-color: #C9B8FF;
-  font-family: 'Open Sans', sans-serif;
+    background-image: url('./asset/wal.png');
+    background-size: cover;
+    background-position: center; 
+   font-family: 'Open Sans', sans-serif;
 }
 
 .title-container {
@@ -33,7 +41,7 @@ body {
   justify-content: center;
   height: 280px;
   width: 200px;
-  background-color: #C9B8FF;
+
   border-radius: 10px;
   box-shadow: -1rem 0 3rem #0003;
   margin: 10px;
@@ -59,12 +67,11 @@ body {
 
 .title {
   text-align: center;
-  color: #666666;
   font-weight: 500;
   position: absolute;
   top: 15px;
-  color: #666666;
-  text-shadow: 2px 2px #C9B8FF;
+  color: #000;
+
   animation: title-animation 5s ease-in-out infinite;
 }
 
